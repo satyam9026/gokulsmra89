@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert ( Jiga Bhai ) | Premium VIP Signals</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #000;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.10) 0%, transparent 45%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at top, #161616 0%, #000 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Live ticker strip */
+        .ticker-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(212, 175, 55, 0.08);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 6px 0;
+            z-index: 10;
+            backdrop-filter: blur(6px);
+        }
+
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 22s linear infinite;
+        }
+
+        .ticker span {
+            display: inline-block;
+            padding: 0 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #d4af37;
+        }
+
+        .ticker span.up {
+            color: #4ade80;
+        }
+
+        .ticker span.down {
+            color: #f87171;
+        }
+
+        @keyframes ticker {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .card {
+            background: rgba(20, 20, 20, 0.65);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: 24px;
+            padding: 38px 26px 30px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset, 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(212, 175, 55, 0.12);
+            animation: fadeIn 0.9s ease;
+            margin-top: 48px;
+            position: relative;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .urgency {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #f87171, #ef4444);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 4px 14px rgba(239, 68, 68, 0.4);
+            letter-spacing: 0.3px;
+        }
+
+        .ring-wrap {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 22px auto 18px;
+        }
+
+        .ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #d4af37, #f5d76e, #d4af37, transparent 70%);
+            animation: spin 4s linear infinite;
+            padding: 3px;
+            -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 3px));
+            mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #fff calc(100% - 3px));
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .dp {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 114px;
+            height: 114px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #0a0a0a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .verified {
+            position: absolute;
+            bottom: 6px;
+            right: 2px;
+            width: 26px;
+            height: 26px;
+            background: #1d9bf0;
+            border-radius: 50%;
+            border: 2px solid #141414;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: 0.3px;
+            background: linear-gradient(90deg, #f5d76e, #d4af37, #f5d76e);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+            margin-bottom: 6px;
+        }
+
+        @keyframes shine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        p.tagline {
+            color: #aaa;
+            font-size: 13.5px;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .trust-chip {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10.5px;
+            color: #ccc;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            padding: 14px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .stat {
+            flex: 1;
+        }
+
+        .stat b {
+            display: block;
+            font-size: 19px;
+            color: #f5d76e;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat span {
+            font-size: 10.5px;
+            color: #888;
+        }
+
+        .live-count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #4ade80;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulseDot 1.4s infinite;
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.04);
+            border-left: 2px solid #d4af37;
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-bottom: 20px;
+            text-align: left;
+            font-size: 12px;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .testimonial b {
+            color: #f5d76e;
+            display: block;
+            margin-top: 4px;
+            font-size: 11px;
+        }
+
+        .join-btn {
+            display: block;
+            width: 100%;
+            padding: 17px;
+            background: linear-gradient(90deg, #d4af37, #f5d76e, #d4af37);
+            background-size: 200% auto;
+            color: #000;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            animation: pulse 2s infinite, shine 3s linear infinite;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+        }
+
+        .join-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            animation: none;
+        }
+
+        .disclaimer {
+            font-size: 9.5px;
+            color: #666;
+            margin-top: 14px;
+            line-height: 1.4;
+        }
+
+        footer {
+            margin-top: 22px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="up">NIFTY 50 ▲ 24,812.30 (+0.62%)</span>
+            <span class="down">BANK NIFTY ▼ 51,240.15 (-0.28%)</span>
+            <span class="up">SENSEX ▲ 81,455.90 (+0.71%)</span>
+            <span class="up">NIFTY 50 ▲ 24,812.30 (+0.62%)</span>
+            <span class="down">BANK NIFTY ▼ 51,240.15 (-0.28%)</span>
+            <span class="up">SENSEX ▲ 81,455.90 (+0.71%)</span>
+        </div>
+    </div>
+
+    <div class="card" id="mainCard">
+        <div class="urgency">🔥 Limited Free Slots Today</div>
+
+        <div class="ring-wrap">
+            <div class="ring"></div>
+            <img class="dp"
+                src="image.png"
+                alt="Gujarati Trader ( Jiga Bhai )">
+            <div class="verified">✔️</div>
+        </div>
+
+        <h1>GOKUL CHHABRA </h1>
+        <p class="tagline">Intraday • Swing • Positional Calls<br>Daily accurate market updates seedha apne Telegram par
+        </p>
+
+        <div class="trust-row">
+            <div class="trust-chip">📊 Live Analysis</div>
+            <div class="trust-chip">⚡ Fast Alerts</div>
+            <div class="trust-chip">🔒 Secure Channel</div>
+        </div>
+
+        <button class="join-btn" id="joinBtn" disabled>🔒 Verifying... Please Wait</button>
+
+        <div class="stats">
+            <div class="stat"><b>92%</b><span>Accuracy*</span></div>
+            <div class="stat"><b>15K+</b><span>Members</span></div>
+            <div class="stat"><b>Daily</b><span>Free Calls</span></div>
+        </div>
+
+        <div class="live-count"><span class="live-dot"></span><span id="liveCounter">142 people joined in last
+                hour</span></div>
+
+        <div class="testimonial">
+            "Roz ke calls bahut accurate hote hain, intraday mein kaafi help milti hai."
+            <b>— Rahul S., Member</b>
+        </div>
+
+        <p class="disclaimer">*Past performance is not indicative of future results. Trading in stock market involves
+            risk. This is not investment advice — trade at your own discretion.</p>
+    </div>
+
+    <footer>Ads by <a href="https://t.me/+ahlminu0Ax4yYmFl" target="_blank">Siviadsangency</a></footer>
+
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1050734261181342');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1050734261181342&ev=PageView&noscript=1" /></noscript>
+
+    <script>
+        const TELEGRAM_LINK = "https://t.me/+viqEdDd3Fa0yMWY1";
+
+        const joinBtn = document.getElementById('joinBtn');
+        let interacted = false;
+
+        function unlockButton() {
+            if (interacted) return;
+            interacted = true;
+            joinBtn.disabled = false;
+            joinBtn.innerHTML = "🚀 Join Channel Now";
+        }
+
+        window.addEventListener('mousemove', unlockButton, { once: true });
+        window.addEventListener('touchstart', unlockButton, { once: true });
+        window.addEventListener('scroll', unlockButton, { once: true });
+        window.addEventListener('keydown', unlockButton, { once: true });
+        setTimeout(unlockButton, 2500);
+
+        joinBtn.addEventListener('click', function () {
+            if (joinBtn.disabled) return;
+            fbq('track', 'Subscribe');
+            window.location.href = TELEGRAM_LINK;
+        });
+
+        // Animated live counter (cosmetic - purely visual social proof)
+        const counterEl = document.getElementById('liveCounter');
+        let count = 142;
+        setInterval(() => {
+            count += Math.floor(Math.random() * 2);
+            counterEl.textContent = count + " people joined in last hour";
+        }, 8000);
+    </script>
+
+</body>
+
+</html>
